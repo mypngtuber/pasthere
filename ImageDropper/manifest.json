@@ -1,0 +1,19 @@
+{
+  "manifestVersion": 5,
+  "id": "com.hazem.imagedropper",
+  "name": "ImageDropper",
+  "version": "0.1.0",
+  "main": "index.html",
+  "host": { "app": "premierepro", "minVersion": "25.6.0" },
+  "entrypoints": [{
+    "type": "panel", "id": "imageDropperPanel", "label": { "default": "ImageDropper" },
+    "minimumSize": { "width": 300, "height": 480 },
+    "preferredDockedSize": { "width": 340, "height": 650 }
+  }],
+  "requiredPermissions": {
+    "localFileSystem": "request",
+    "clipboard": "read",
+    "network": { "domains": "all" },
+    "launchProcess": { "extensions": [""] }
+  }
+}
