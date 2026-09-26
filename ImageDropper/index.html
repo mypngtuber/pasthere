@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><div class="brand"><span class="brand-mark">ID</span><div><h1>ImageDropper</h1><p>Web Image <span class="arrow">→</span> Premiere</p></div></div><span class="version">0.1</span></header>
+    <section class="workspace">
+      <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="Drop images here or choose images">
+        <div class="drop-icon">＋</div>
+        <strong>DROP IMAGE HERE</strong>
+        <span>Drag from Chrome / Edge<br>or drop a local image</span>
+        <button id="choose-image" type="button" class="primary">Choose Image</button>
+      </div>
+      <div class="section-label">IMPORT OPTIONS</div>
+      <div class="form-row"><label for="duration">Duration <small>seconds per image</small></label><input id="duration" type="number" min="0.1" max="600" step="0.1" value="5.0"></div>
+      <div class="form-row"><label for="timeline">Timeline</label><select id="timeline"><option value="timeline">Add to Timeline</option><option value="project">Project Panel Only</option></select></div>
+      <div class="form-row"><label for="scale">Scale</label><select id="scale"><option value="fit">Fit to Frame</option><option value="fill">Fill Frame</option><option value="original">Keep Original</option></select></div>
+      <div class="form-row"><label for="track">Video Track</label><select id="track"><option value="0">V1</option><option value="1">V2</option><option value="2">V3</option><option value="3">V4</option><option value="4">V5</option><option value="5">V6</option><option value="6">V7</option><option value="7">V8</option></select></div>
+      <div class="actions"><button id="paste" type="button">Paste Image / URL</button><button id="url-toggle" type="button">Import Image URL</button><button id="open-folder" type="button">Open Image Folder</button></div>
+      <form id="url-form" hidden><label for="image-url">Direct image URL</label><div class="url-row"><input id="image-url" type="url" placeholder="https://example.com/image.jpg" aria-label="Image URL"><button class="primary" type="submit">Import</button></div></form>
+      <details id="settings"><summary>Settings</summary><div class="settings-body"><p>Changes to options above become your defaults.</p><label class="checkbox"><input id="create-bin" type="checkbox" checked> Create ImageDropper bin</label><label class="checkbox"><input id="auto-timeline" type="checkbox" checked> Auto add to timeline</label><div class="folder-row"><span>Image folder</span><button id="change-folder" type="button">Choose…</button></div><div id="folder-path" class="path">Plugin data / ImageDropper / Images</div><button id="reset-folder" type="button">Use plugin folder</button></div></details>
+    </section>
+    <footer><div id="status-dot" class="status-dot"></div><span id="status" role="status" aria-live="polite">Ready.</span></footer>
+  </main>
+</body>
+</html>
